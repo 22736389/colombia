@@ -114,10 +114,10 @@
 
 	d3.json('json/colombia-departments.json', function(error, topology) {
 	    g.selectAll('path')
-			.data(topojson.feature(topology, topology.objects.usStates).features)
+			.data(topojson.feature(topology, topology.objects.COL_adm1).features)
 			.enter()
 			.append('path')
-			.attr('class', function(d){ return 'states ' + d.properties.STATE_ABBR;} )
+			.attr('class', function(d){ return 'states ' + d.properties.ISO;} )
 			.attr('d', path)
 			.attr('fill', function(d, i) { return color(i); });
 	});
