@@ -237,7 +237,7 @@
 
 	function processData(data) {
 		if(!data || !data.place || !data.lang) return; 
-		if(data.place.country_code !== 'COL') return;
+		if(data.place.country_code !== 'US') return;
 		//if(data.lang !== 'en') return;
 
 		if (positiveWords.some(function(v) { return data.text.toLowerCase().indexOf(v) !== -1; })) {
